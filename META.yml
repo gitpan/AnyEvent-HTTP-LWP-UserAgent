@@ -1,0 +1,21 @@
+---
+abstract: 'LWP::UserAgent interface but works using AnyEvent::HTTP'
+author:
+  - 'Yury Zavarin <yury.zavarin@gmail.com>'
+build_requires:
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101612, CPAN::Meta::Converter version 2.101591'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: AnyEvent-HTTP-LWP-UserAgent
+requires:
+  AnyEvent::HTTP: 0
+  HTTP::Response: 0
+  LWP::UserAgent: 0
+  parent: 0
+version: 0.01
