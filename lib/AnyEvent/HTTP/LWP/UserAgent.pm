@@ -1,6 +1,6 @@
 package AnyEvent::HTTP::LWP::UserAgent;
 BEGIN {
-  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.01';
+  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.02';
 }
 
 use strict;
@@ -94,7 +94,7 @@ AnyEvent::HTTP::LWP::UserAgent - LWP::UserAgent interface but works using AnyEve
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -104,8 +104,8 @@ version 0.01
   my $ua = AnyEvent::HTTP::LWP::UserAgent->new;
   my @urls = (...);
   my @coro = map {
+      my $url = $_;
       async {
-          my $url = $_;
           my $r = $ua->get($url);
           print "url $url, content " . $r->content . "\n";
       }

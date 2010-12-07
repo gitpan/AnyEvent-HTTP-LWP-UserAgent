@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution AnyEvent-HTTP-LWP-UserAgent,
-version 0.01:
+version 0.02:
 
   LWP::UserAgent interface but works using AnyEvent::HTTP
 
