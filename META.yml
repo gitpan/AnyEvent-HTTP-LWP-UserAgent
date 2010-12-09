@@ -18,4 +18,4 @@ requires:
   HTTP::Response: 0
   LWP::UserAgent: 0
   parent: 0
-version: 0.02
+version: 0.03
