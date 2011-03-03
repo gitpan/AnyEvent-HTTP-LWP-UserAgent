@@ -1,6 +1,6 @@
 package AnyEvent::HTTP::LWP::UserAgent;
 BEGIN {
-  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.04';
+  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.05';
 }
 
 use strict;
@@ -124,7 +124,7 @@ AnyEvent::HTTP::LWP::UserAgent - LWP::UserAgent interface but works using AnyEve
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
