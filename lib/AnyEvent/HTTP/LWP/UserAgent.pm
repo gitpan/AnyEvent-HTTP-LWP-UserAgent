@@ -1,6 +1,6 @@
 package AnyEvent::HTTP::LWP::UserAgent;
 BEGIN {
-  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.03';
+  $AnyEvent::HTTP::LWP::UserAgent::VERSION = '0.04';
 }
 
 use strict;
@@ -55,14 +55,27 @@ sub simple_request {
             }
         }
         $out_req = HTTP::Response->new($code, $message, $headers, $d);
+
+        $self->run_handlers(response_header => $out_req);
+
+        # from LWP::Protocol
+        my %skip_h;
+        for my $h ($self->handlers('response_data', $out_req)) {
+            next if $skip_h{$h};
+            unless ($h->{callback}->($out_req, $self, $h, $d)) {
+                # XXX remove from $response->{handlers}{response_data} if present
+                $skip_h{$h}++;
+            }
+        }
+
         $cv->end;
     };
     $cv->recv;
 
     $out_req->request($in_req);
-    if ($self->cookie_jar) {
-        $self->cookie_jar->extract_cookies($out_req);
-    }
+
+    # cookie_jar will be set by the handler
+    $self->run_handlers(response_done => $out_req);
 
     return $out_req;
 }
@@ -111,7 +124,7 @@ AnyEvent::HTTP::LWP::UserAgent - LWP::UserAgent interface but works using AnyEve
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -165,7 +178,7 @@ Yury Zavarin <yury.zavarin@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Yury Zavarin.
+This software is copyright (c) 2011 by Yury Zavarin.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
