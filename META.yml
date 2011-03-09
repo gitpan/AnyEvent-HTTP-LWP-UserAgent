@@ -16,6 +16,6 @@ name: AnyEvent-HTTP-LWP-UserAgent
 requires:
   AnyEvent::HTTP: 0
   HTTP::Response: 0
-  LWP::UserAgent: 0
+  LWP::UserAgent: 5.815
   parent: 0
-version: 0.05
+version: 0.06

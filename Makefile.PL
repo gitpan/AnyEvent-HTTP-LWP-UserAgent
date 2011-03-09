@@ -24,10 +24,10 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'AnyEvent::HTTP' => '0',
     'HTTP::Response' => '0',
-    'LWP::UserAgent' => '0',
+    'LWP::UserAgent' => '5.815',
     'parent' => '0'
   },
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }
