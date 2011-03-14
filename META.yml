@@ -14,8 +14,8 @@ meta-spec:
   version: 1.4
 name: AnyEvent-HTTP-LWP-UserAgent
 requires:
-  AnyEvent::HTTP: 0
+  AnyEvent::HTTP: 2.1
   HTTP::Response: 0
   LWP::UserAgent: 5.815
   parent: 0
-version: 0.06
+version: 0.07

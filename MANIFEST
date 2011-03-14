@@ -1,14 +1,11 @@
 Changes
-Changes~
 LICENSE
 MANIFEST
 META.yml
 Makefile.PL
 README
 dist.ini
-dist.ini~
 lib/AnyEvent/HTTP/LWP/UserAgent.pm
-lib/AnyEvent/HTTP/LWP/UserAgent.pm~
 t/callbacks.t
 t/main.t
 t/release-pod-syntax.t

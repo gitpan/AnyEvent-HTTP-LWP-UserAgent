@@ -22,12 +22,12 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'AnyEvent::HTTP::LWP::UserAgent',
   'PREREQ_PM' => {
-    'AnyEvent::HTTP' => '0',
+    'AnyEvent::HTTP' => '2.1',
     'HTTP::Response' => '0',
     'LWP::UserAgent' => '5.815',
     'parent' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }
