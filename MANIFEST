@@ -6,6 +6,7 @@ Makefile.PL
 README
 dist.ini
 lib/AnyEvent/HTTP/LWP/UserAgent.pm
+t/async.t
 t/callbacks.t
 t/main.t
 t/release-pod-syntax.t

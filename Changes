@@ -1,5 +1,9 @@
 Revision history for AnyEvent-HTTP-LWP-UserAgent
 
+0.08    Fri Oct 05, 2012
+        Fair support of pure AnyEvent without Coro.
+        Thanks to Yasutaka Atarashi.
+
 0.07    Mon Mar 14, 2011
         Use new version of AnyEvent::HTTP with persistent
         connections. Initial support of LWP's conn_cache
