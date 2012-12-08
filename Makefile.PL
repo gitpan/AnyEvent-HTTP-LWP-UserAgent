@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "LWP::UserAgent interface but works using AnyEvent::HTTP",
   "AUTHOR" => "Yury Zavarin <yury.zavarin\@gmail.com>",
   "BUILD_REQUIRES" => {
+    "File::Temp" => 0,
     "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
@@ -32,7 +33,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.09",
   "test" => {
     "TESTS" => "t/*.t"
   }

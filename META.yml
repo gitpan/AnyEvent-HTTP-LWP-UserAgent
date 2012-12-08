@@ -3,11 +3,12 @@ abstract: 'LWP::UserAgent interface but works using AnyEvent::HTTP'
 author:
   - 'Yury Zavarin <yury.zavarin@gmail.com>'
 build_requires:
+  File::Temp: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300024, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,4 +24,4 @@ requires:
   parent: 0
   strict: 0
   warnings: 0
-version: 0.08
+version: 0.09
