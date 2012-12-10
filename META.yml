@@ -24,4 +24,4 @@ requires:
   parent: 0
   strict: 0
   warnings: 0
-version: 0.09
+version: 0.10
